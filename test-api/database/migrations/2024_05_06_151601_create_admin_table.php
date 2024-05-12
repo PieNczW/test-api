@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('admin', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_admin', 255);
+            $table->longText('description')->nullable()->default('text');
             $table->timestamps();
         });
     }
